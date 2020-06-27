@@ -1,0 +1,585 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+  <meta name="viewport"
+    content="width=device-width, user-scalable=no, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0">
+
+  <!-- For Adding Logo in the Title -->
+  <link rel="icon" href="LOGO.png" type="image/png">
+  <title>AIM Technologies- Targeted Advertising for Ahmedabad - ChatBot</title>
+
+  <!-- SEO -->
+  <meta name="author" content="AIM Technologies Ahmedabad">
+  <meta name="keywords" content="Online advertising Ahmedabad, 
+                                  facebook advertising, digital advertising,
+                                  facebook advertising agency , 
+                                  digital marketing Ahmedabad,
+                                  online marketing Ahmedabad, 
+                                  online banner advertising
+                                  advertising agency in ahmedabad justdial
+                                  advertising agencies in ahmedabad list
+                                  advertising agencies in ahmedabad vastrapur
+                                  best advertising agency in ahmedabad
+                                  creative advertising agency in ahmedabad
+                                  famous advertising agency in ahmedabad
+                                  advertising agency in isanpur ahmedabad
+                                  digital advertising agencies in ahmedabad
+                                  branding and advertising agency in ahmedabad
+                                  creative advertising agency ahmedabad
+                                  advertising agencies in ahmedabad list
+                                  best advertising agency in ahmedabad
+                                  famous advertising agency in ahmedabad
+                                  advertising agency in isanpur ahmedabad
+                                  top advertising agency in ahmedabad " />
+
+  <meta name="description" content="AIM Technologies is a purchase behaviour based retargeting advertising company. We use our 
+        machine learning technology to reach out your existing customers and increase your repeat purchase." />
+
+  <!-- Favicons -->
+  <!-- <link href="img/logo_whitered.png" rel="icon"> -->
+  <!-- <link href="img/logo_whitered.png" rel="apple-touch-icon"> -->
+
+  <!-- Google Fonts -->
+  <link
+    href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,500,600,700,700i|Montserrat:300,400,500,600,700"
+    rel="stylesheet">
+
+  <!-- Bootstrap CSS File -->
+  <link href="bootstrap.min.css" rel="stylesheet">
+
+
+  <!-- I Icons -->
+  <script src='https://kit.fontawesome.com/a076d05399.js'></script>
+
+
+  <!-- For FaceBook and LinkedIn profile Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+  <!--===============================================================================================-->
+  <link rel="icon" type="image/png" href="images/icons/favicon.ico" />
+  <!--===============================================================================================-->
+
+
+  <!-- Main Stylesheet File -->
+  <link href="style.css" rel="stylesheet">
+
+  <!-- =======================================================
+    Theme Name: Rapid
+    Theme URL: https://bootstrapmade.com/rapid-multipurpose-bootstrap-business-template/
+    Author: BootstrapMade.com
+    License: https://bootstrapmade.com/license/
+  ======================================================= -->
+
+
+
+  <!-- For testimonial -->
+
+
+
+  <!-- Optional theme -->
+  <style>
+    #chat-circle {
+      background: #5A5EB9;
+      border-radius: 50%;
+      padding: 10px;
+      cursor: pointer;
+      box-shadow: 0px 3px 16px 0px rgba(0, 0, 0, 0.6), 0 3px 1px -2px rgba(0, 0, 0, 0.2), 0 1px 5px 0 rgba(0, 0, 0, 0.12);
+    }
+
+    #chat-circle img {
+      border-radius: 50%;
+    }
+
+    .chat-box {
+      justify-content: center;
+      align-items: center;
+      border-radius: 10px;
+      box-shadow: 0px 5px 35px 9px #ccc;
+    }
+
+    .chat-box-toggle {
+      float: right;
+      margin-right: 15px;
+      cursor: pointer;
+    }
+
+    .chat-box-header {
+      background: #5A5EB9;
+      height: max-content;
+      color: floralwhite;
+      text-align: center;
+      padding-top: 5px;
+      padding-bottom: 5px;
+    }
+
+    .chat-box-body {
+      position: relative;
+      min-height: 100%;
+      border: 1px solid #ccc;
+      overflow: hidden;
+    }
+
+    .chat-box-body:after {
+      content: "";
+      background-image: url('background.png');
+      top: 0;
+      left: 0;
+      bottom: 0;
+      right: 0;
+      height: 100%;
+      position: absolute;
+      z-index: -1;
+    }
+
+    #chat-input {
+      background: #f4f7f9;
+      width: 100%;
+      position: relative;
+      height: 47px;
+      padding-top: 10px;
+      padding-right: 50px;
+      padding-bottom: 10px;
+      padding-left: 15px;
+      border: none;
+      resize: none;
+      outline: none;
+      border: 1px solid #ccc;
+      color: #888;
+      border-top: none;
+      border-bottom-right-radius: 5px;
+      border-bottom-left-radius: 5px;
+      overflow: hidden;
+    }
+
+    .chat-input>form {
+      margin-bottom: 0;
+    }
+
+    #chat-input::-webkit-input-placeholder {
+      /* Chrome/Opera/Safari */
+      color: #ccc;
+    }
+
+    #chat-input::-moz-placeholder {
+      /* Firefox 19+ */
+      color: #ccc;
+    }
+
+    #chat-input:-ms-input-placeholder {
+      /* IE 10+ */
+      color: #ccc;
+    }
+
+    #chat-input:-moz-placeholder {
+      /* Firefox 18- */
+      color: #ccc;
+    }
+
+    .chat-submit {
+      position: absolute;
+      bottom: 8px;
+      right: 5%;
+      background: transparent;
+      box-shadow: none;
+      border: none;
+      border-radius: 50%;
+      color: #5A5EB9;
+      height: 35px;
+      width: 35px;
+    }
+
+    .chat-logs {
+      padding: 15px;
+      height: 370px;
+      overflow-y: scroll;
+    }
+
+    .chat-logs::-webkit-scrollbar-track {
+      -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+      background-color: #F5F5F5;
+    }
+
+    .chat-logs::-webkit-scrollbar {
+      width: 5px;
+      background-color: #F5F5F5;
+    }
+
+    .chat-logs::-webkit-scrollbar-thumb {
+      background-color: #5A5EB9;
+    }
+
+    @media only screen and (max-width: 500px) {
+      .chat-logs {
+        height: 40vh;
+      }
+    }
+
+    .chat-msg.user>.msg-avatar img {
+      width: 3em;
+      height: 3em;
+      border-radius: 50%;
+      border: 1px solid black;
+      float: left;
+    }
+
+    .chat-msg.self>.msg-avatar img {
+      width: 3em;
+      height: 3em;
+      border-radius: 50%;
+      border: 1px solid black;
+      float: right;
+    }
+
+    .cm-msg-text {
+      background-color: #5A5EB9;
+      padding: 10px 15px 10px 15px;
+      color: floralwhite;
+      float: left;
+      margin-left: 10px;
+      position: relative;
+      margin-bottom: 20px;
+      border-radius: 30px;
+    }
+
+    .chat-msg {
+      clear: both;
+    }
+
+    .chat-msg.self>.cm-msg-text {
+      float: right;
+      margin-right: 10px;
+      background: #5A5EB9;
+      color: white;
+    }
+
+    .cm-msg-button>ul>li {
+      list-style: none;
+      float: left;
+      width: 50%;
+    }
+
+    .cm-msg-button {
+      clear: both;
+      margin-bottom: 70px;
+    }
+
+    .btn #my-btn {
+      background: white;
+      padding-top: 13px;
+      padding-bottom: 12px;
+      border-radius: 45px;
+      padding-right: 40px;
+      padding-left: 40px;
+      color: #5865C3;
+    }
+  </style>
+</head>
+
+
+<body>
+
+  <!--===============================================================================================-->
+  <!-- Header -->
+  <!--===============================================================================================-->
+  <header id="header">
+
+    <div class="container">
+
+      <!-- Creating an 2-Column Layout -->
+      <div class="row">
+
+        <div class="col-lg-8">
+          <div class="logo float-left">
+            <!-- Uncomment below if you prefer to use an image logo -->
+            <h1 class="text-light">
+              <a href="http://www.aim-tech.net/" target="_blank" class="scrollto">
+                <span>
+                  <h4>
+                    <strong> <ul>A.I.M Technologies </strong></ul>
+                  </h4>
+                </span>
+              </a>
+            </h1>
+          </div>
+        </div>
+        <!-- End of Col-lg-8 -->
+
+        <div class="col-lg-4" style="text-align: right;">
+          <div class="social-links">
+            <a href="https://m.facebook.com/TargetWithAIM/" class="facebook">
+              <i class="fa fa-facebook"
+                style="font-size: 1.5em; color: white; background-color: #1bb1dc; width: 1.5em; text-align: center; border-radius: 50%; padding: 5px;"></i>
+            </a> &nbsp;
+            <a href="https://www.linkedin.com/company/targetwithaim/" class="linkedin">
+              <i class="fa fa-linkedin"
+                style="font-size: 1.5em; color: white; background-color: #1bb1dc; width: 1.5em; text-align: center; border-radius: 50%; padding: 5px;"></i>
+            </a>
+          </div>
+        </div>
+        <!-- End of Col-lg-4 -->
+      </div>
+      <!-- End of Row -->
+    </div>
+    <!-- End of Container -->
+
+    <button class="navbar-toggler rounded-0" type="button" data-toggle="collapse" data-target="#navigation"
+      aria-controls="navigation" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <!-- End of Container -->
+  </header>
+  <!-- End of Header -->
+
+  <!--===============================================================================================-->
+  <!-- MAIN section -->
+  <!--===============================================================================================-->
+  <main id="main" style="background-image: url('background.png');">
+
+    <div id="why-us">
+      <div class="container">
+        <header class="section-header">
+          <div class="row">
+            <div class="col-md-6 col-lg-6">
+              <h3>Interact With the ChatBot </h3>
+            </div>
+            <div class="col-md-6 col-lg-6">
+              <div class="form-group">
+                <label for="shop1" style="font-size: 1em;"> <strong> Select Shop </strong> </label>
+                <select class="form-control custom-select" id="shop1">
+                  <option style="color:#5A5EB9;" class="dropdown-item-text" id="txt1" value="Select A shop" selected
+                    disabled> Select a Shop To Get Started</option>
+                  <option style="color:#5A5EB9;" class="dropdown-item-text" id="op1" value="ShivShakti Kirana Store">
+                    ShivShakti Kirana Store</option>
+                  <option style="color:#5A5EB9;" class="dropdown-item-text" id="op2" value="Apna Bazar"> Apna Bazar
+                  </option>
+                  <option style="color:#5A5EB9;" class="dropdown-item-text" id="op3" value="Global Bazar"> Global Bazar
+                  </option>
+                </select>
+              </div>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-lg-4 col-md-6"></div>
+            <div class="col-lg-4 col-md-6" style="text-align: center;">
+              <button type="button" id="chat-circle" class="btn btn-raised" disabled>
+              <!--<div id="chat-circle" class="btn btn-raised">-->
+                <img src="BOT1.png" class="img-fluid"></button>
+              </div>    
+            </div>
+            <div class="col-lg-4 col-md-6"></div>  
+          </div>
+          <div class="body">
+            <div class="row">
+              <div class="col-md-6 col-lg-2">
+
+              </div>
+              <div class="col-md-6 col-lg-8" style="text-align: center;">
+                <div class="chat-box" style="display: none;">
+                  <div class="chat-box-header">
+                    <strong id="shoptitle"></strong>
+                    <span class="chat-box-toggle">
+                      <i class="fa fa-close"></i>
+                    </span>
+                  </div>
+                  <div class="chat-box-body">
+                    <div class="chat-box-overlay">
+                    </div>
+                    <div class="chat-logs">
+                    </div>
+                  </div>
+                  <div class="chat-input">
+                    <form>
+                      <script type="text/javascript" src="chat.js"></script>
+                      <input type="text" id="chat-input" placeholder="How we can you help you ?" autofocus>
+                      <!--<input type="text" id="input" placeholder="How we can you help you ?" autofocus>-->
+                      <button type="submit" class="chat-submit" id="chat-submit">
+                        <i class="fa fa-send"></i></button>
+                    </form>
+                  </div>
+                </div>
+              </div>
+              <div class="col-md-6 col-lg-2">
+              </div>
+            </div>
+          </div>
+        </header>
+      </div>
+      <!-- End of Container -->
+      </section>
+      <!-- End of ABOUT section -->
+  </main>
+
+  <a href="#" class="back-to-top"><i class="fa fa-chevron-up"></i></a>
+  <!-- Uncomment below if you want to use a preloader -->
+  <!-- <div id="preloader"></div> -->
+
+  <!-- JavaScript Libraries -->
+  <script src="jquery.min.js"></script>
+  <script src="jquery-migrate.min.js"></script>
+  <script src="bootstrap.bundle.min.js"></script>
+  <script src="easing.min.js"></script>
+  <script src="easing.js"></script>
+  <script src="wow.min.js"></script>
+
+  <script
+    src="https://static.codepen.io/assets/common/stopExecutionOnTimeout-157cd5b220a5c80d4ff8e0e70ac069bffd87a61252088146915e8726e5d9f147.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.0.0-alpha.6/js/bootstrap.min.js"></script>
+  <script src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
+<script type="text/javascript">
+  const trigger = [
+  ["hi", "hey", "hello"],
+  ["thanks", "thank you"],
+  ["bye", "good bye", "goodbye"],
+];
+
+const reply = [
+  ["Welcome to Kirana Store. We will help you order grocery items available at our store and get it deliver at your home. You can Start with saying Send Me 5 Kg Bataka and 7 Kg Milk "],
+  ["You're welcome"],
+  ["see you later"],
+];
+
+const alternative = [
+  "Try again",
+  "I'm listening... Please say Again"
+];
+</script>
+ <script id="INLINE_PEN_JS_ID">
+  var output = document.getElementById('chat-input'); 
+  function bot() { 
+  output.innerHTML = msg;
+    }
+  know = {
+                "hello" : "Welcome to the Kirana store. We will help you order grocery items available at our store. And get it delivered at your home. You Can Start with saying => Send Me 5 Kg Bataka and 7 Kg Milk ",
+                "Hello" : "Welcome to the Kirana store. We will help you order grocery items available at our store. And get it delivered at your home. You Can Start with saying => Send Me 5 Kg Bataka and 7 Kg Milk",
+               "Send Me 5 Kg Bataka and 7 Kg Milk" : "Your Order has been Confirm :) Can you please tell your name?",
+                "Shreena" : "Thank you for shopping with us :) Please provide your contact number. Incase our delivery agent can not find address, we will contact you by provided number.",
+                "8787878787" : "Please provide your delivery address to provide grocery at your doorstep.",
+                "Krishana society" : "Your order has been confirmed and will be delivered to you at your address fewo Thanks for ordering with us.",               
+                "" : ":)"
+            };
+
+    $(document).ready(function () {
+      $("select.form-control").change(function () {
+        var selectedShop = $(this).children("option:selected").val();
+        if(selectedShop!="")
+        {
+          document.getElementById("chat-circle").disabled = false;
+          document.getElementById("shoptitle").innerHTML = selectedShop;
+        }
+        // confirm("Selected Shop :" + selectedShop);
+        //else{
+        //document.getElementById("shoptitle").innerHTML = selectedShop;
+            //}
+      });
+    });
+
+    $(function () {
+      var INDEX = 0;
+      $("#chat-submit").click(function (e) {
+        e.preventDefault();
+        var msg = $("#chat-input").val();
+        if (msg.trim() == '')
+          return false;
+
+        generate_message(msg, 'self');
+        var buttons = [{
+          name: 'Existing User',
+          value: 'existing'
+        },
+        {
+          name: 'New User',
+          value: 'new'
+        }];
+        var sys_msg;
+        if (msg in know){
+        sys_msg = know[msg];
+         }
+        //var sys_msg = "Welcome to chatbot";
+        setTimeout(function () {
+          generate_message(sys_msg, 'user');
+        }, 1000);
+      });
+
+//https://github.com/sylviapap/chatbot [Chatting Code]
+      function generate_message(msg, type) {
+        INDEX++;
+        var str = "";
+        str += "<div id='cm-msg-" + INDEX + "' class=\"chat-msg " + type + "\">";
+
+        if (type == 'user') {
+          str += "<span class=\"msg-avatar\">";
+            str += "<img src = \"LOGOBOT.png\" alt=\"BOT\"/ >";
+        }
+        else {
+          str += "<span class=\"msg-avatar\">";
+          str += "<img src =\"user.jpg\" alt=\"YOU\" />";
+        }
+        str += "<\/span>";
+        str += "<div class=\"cm-msg-text\">";
+        //str += document.write("Hello");
+        str += msg;
+        str += "<\/div>";
+        str += "<\/div>";
+        $(".chat-logs").append(str);
+        $("#cm-msg-" + INDEX).hide().fadeIn(300);
+        if (type == 'self') {
+          $("#chat-input").val('');
+        }
+        $(".chat-logs").stop().animate({ scrollTop: $(".chat-logs")[0].scrollHeight }, 1000);
+      }
+
+      function generate_button_message(msg, buttons) {
+        INDEX++;
+        var btn_obj = buttons.map(function (button) {
+          return "              <li class=\"button\"><a href=\"javascript:;\" class=\"btn btn-primary chat-btn\" chat-value=\"" + button.value + "\">" + button.name + "<\/a><\/li>";
+        }).join('');
+        var str = "";
+        str += "<div id='cm-msg-" + INDEX + "' class=\"chat-msg user\">";
+        str += "          <span class=\"msg-avatar\">";
+        str += "            <img src =\"user.jpg\" alt=\"YOU\" />";
+        str += "          <\/span>";
+        str += "          <div class=\"cm-msg-text\">";
+        str += msg;
+        str += "          <\/div>";
+        str += "          <div class=\"cm-msg-button\">";
+        str += "            <ul>";
+        str += btn_obj;
+        str += "            <\/ul>";
+        str += "          <\/div>";
+        str += "        <\/div>";
+        $(".chat-logs").append(str);
+        $("#cm-msg-" + INDEX).hide().fadeIn(300);
+        $(".chat-logs").stop().animate({ scrollTop: $(".chat-logs")[0].scrollHeight }, 1000);
+        $("#chat-input").attr("disabled", true);
+      }
+
+      $(document).delegate(".chat-btn", "click", function () {
+        var value = $(this).attr("chat-value");
+        var name = $(this).html();
+        $("#chat-input").attr("disabled", false);
+        generate_message(name, 'self');
+      });
+
+      $("#chat-circle").click(function () {
+        $("#chat-circle").toggle('scale');
+        $(".chat-box").toggle('scale');
+      });
+
+      $(".chat-box-toggle").click(function () {
+        $("#chat-circle").toggle('scale');
+        $(".chat-box").toggle('scale');
+      });
+
+    });
+  </script>
+
+  <!-- Template Main Javascript File -->
+  <script src="main.js"></script>
+
+</body>
+
+</html>
